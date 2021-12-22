@@ -78,7 +78,7 @@ function Projects() {
                         title={"Portfolio"}
                         src={Portfolio}
                         demo_href={window.location.href}
-                        github_href={"https://github.com/azizChebbi/Netflix"}
+                        github_href={"https://github.com/azizChebbi/Portfolio"}
                     />
                 </motion.div>
             </div>

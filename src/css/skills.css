@@ -1,0 +1,51 @@
+.skills {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    color: black;
+}
+.skills div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 60vw;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.skills img {
+    width: 150px;
+    transition: 0.4s;
+}
+
+.skills img:hover {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 900px) {
+    .skills {
+        padding-top: 50px;
+    }
+    .skills > div {
+        margin: 100px 0;
+        max-width: 80vw;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .skills {
+        padding-top: 20px;
+    }
+    .skills > div {
+        margin-top: 50px;
+    }
+    .skills img {
+        width: 100px;
+    }
+    .skills h1 {
+        margin: 0;
+    }
+}

@@ -1,0 +1,58 @@
+.about {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 100px 20px;
+    min-height: 80vh;
+}
+.about img {
+    width: 500px;
+    transition: 0.3s;
+}
+.about > div {
+    flex: 1;
+}
+.about .about-description {
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-left: 100px;
+}
+.about .about-description > div:first-child h1:last-child {
+    color: #ffc200;
+    line-height: 2;
+}
+.about .about-description p {
+    font-size: 17px;
+    font-weight: 100;
+    color: #5b5b5b;
+    letter-spacing: 0;
+    line-height: 1.5;
+    margin: 15px 0;
+    font-family: "Maven Pro", sans-serif;
+}
+.about .about-description button {
+    background-color: #3f3d56;
+    font-family: "Maven Pro", sans-serif;
+    text-transform: capitalize;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+    .about {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 670px) {
+    .about img {
+        width: 350px;
+    }
+    .about .about-description {
+        margin-left: 30px;
+    }
+    .about .about-description h1 {
+        font-size: 30px;
+    }
+}

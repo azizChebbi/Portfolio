@@ -1,0 +1,117 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+    overflow-x: hidden;
+    z-index: 10000;
+    border-bottom: 1px #a8a7a7 solid;
+    margin: 0;
+    color: #cececf;
+    font-family: "Maven Pro", sans-serif;
+    position: fixed;
+    width: 100vw;
+    background-color: white;
+    top: 0;
+}
+nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    color: white;
+    transition: 0.7s;
+    cursor: pointer;
+}
+nav .logo:hover {
+    color: #ffc200;
+}
+nav .logo p {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+nav .link {
+    text-decoration: none;
+    font-weight: 700;
+    color: #aeaeae;
+    font-size: 16px;
+    padding: 5px 30px;
+    transition: 0.7s;
+    cursor: pointer;
+}
+nav .link:hover {
+    color: #ffc200;
+}
+
+nav button {
+    background-color: #6163ff;
+    color: white;
+    padding: 7px 27px;
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    margin-left: 70px;
+    cursor: pointer;
+}
+nav .burger {
+    width: 30px;
+    height: 30px;
+    display: none;
+    margin: auto;
+}
+nav .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+nav .links .active {
+    color: #ffc200;
+}
+nav .links1 {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav .links1 .close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+nav .links1 .close img {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        padding: 10px 0;
+        justify-content: space-between;
+    }
+    nav .links {
+        display: none;
+    }
+    nav .link {
+        margin-top: 20px;
+    }
+    nav button {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    nav .burger {
+        display: block;
+    }
+}

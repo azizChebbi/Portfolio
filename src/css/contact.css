@@ -1,0 +1,67 @@
+.contact {
+    background-color: black;
+    color: #9aa0a6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+.contact > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-wrap: wrap;
+}
+.contact div div {
+    margin: 30px 50px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.contact div i {
+    font-size: 30px;
+    margin: 0 10px;
+    margin-bottom: 30px;
+}
+
+.contact .top {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    border: solid #9aa0a6 1px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contact .top:hover {
+    color: white;
+    background-color: #9aa0a6;
+    border-color: white;
+}
+.contact div:nth-child(2) a {
+    padding: 15px;
+}
+.contact div a img {
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 440px) {
+    .contact div div {
+        margin: 20px;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .contact div a img {
+        width: 25px;
+        height: 25px;
+    }
+    .contact div:nth-child(2) a {
+        padding: 10px 5px;
+    }
+}

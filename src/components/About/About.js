@@ -3,8 +3,9 @@ import Button from "@mui/material/Button";
 import Svg from "../../images/about.svg";
 import "../../css/about.css";
 import { motion } from "framer-motion";
-import { Wave } from "react-animated-text";
+
 import TextTransition, { presets } from "react-text-transition";
+import { Link } from "react-router-dom";
 
 function About() {
     const divVariants = {
@@ -24,6 +25,7 @@ function About() {
         );
         return () => clearTimeout(intervalId);
     }, []);
+
     return (
         <div className='about' id='about'>
             <motion.div
@@ -47,7 +49,16 @@ function About() {
                     experience design, interfaces and web development.
                 </p>
                 <div>
-                    <Button variant='contained'>Download The resume</Button>
+                    <Button variant='contained'>
+                        <Link
+                            to='./Aziz_Chebbi_CV.pdf'
+                            target='_blank'
+                            download
+                            style={{ color: "white", textDecoration: "none" }}
+                        >
+                            Download The resume
+                        </Link>
+                    </Button>
                 </div>
             </motion.div>
             <motion.div

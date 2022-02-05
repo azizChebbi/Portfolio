@@ -4,6 +4,7 @@ import Card from "./Card";
 import Netflix from "../../images/netflix.jpg";
 import Messenger from "../../images/messenger.jpg";
 import Portfolio from "../../images/portfolio.jpg";
+import Ecommerce from "../../images/ecommerce.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -63,9 +64,15 @@ function Projects() {
                 </motion.h1>
                 <motion.div ref={ref} variants={variants} initial='hidden' animate={controls}>
                     <Card
+                        title={"E-commerce"}
+                        src={Ecommerce}
+                        demo_href={"https://e-commerce-azizchebbi.vercel.app/"}
+                        github_href={"https://github.com/azizChebbi/e-commerce"}
+                    />
+                    <Card
                         title={"Netflix"}
                         src={Netflix}
-                        demo_href={"https://netflix-54a41.web.app/"}
+                        demo_href={"https://movies-series-bb260.web.app"}
                         github_href={"https://github.com/azizChebbi/Netflix"}
                     />
                     <Card
@@ -78,7 +85,7 @@ function Projects() {
                         title={"Portfolio"}
                         src={Portfolio}
                         demo_href={window.location.href}
-                        github_href={"https://github.com/azizChebbi/Netflix"}
+                        github_href={"https://github.com/azizChebbi/Portfolio"}
                     />
                 </motion.div>
             </div>

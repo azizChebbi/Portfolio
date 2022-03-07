@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import Svg from "../../images/about.svg";
 import "../../css/about.css";
-import { motion } from "framer-motion";
+import facebook from "../../images/facebook1.png";
+import github from "../../images/github1.png";
+import linkedin from "../../images/linkedin1.png";
+import email from "../../images/email.png";
 
-import TextTransition, { presets } from "react-text-transition";
-import { Link } from "react-router-dom";
 
 function About() {
     const divVariants = {
@@ -27,49 +27,30 @@ function About() {
     }, []);
 
     return (
-        <div className='about' id='about'>
-            <motion.div
-                className='about-description'
-                variants={divVariants}
-                initial='hidden'
-                animate='visible'
-            >
+        <>
+            <div className="icons">
                 <div>
-                    <h1>Hey folks, I'm a</h1>
-                    <h1>
-                        <TextTransition
-                            text={TEXTS[index % TEXTS.length]}
-                            springConfig={presets.gentle}
-                            noOverflow
-                        />
-                    </h1>
+                    <a href=""><img src={facebook} alt="facebook"/></a>
+                    <a href=""><img src={linkedin} alt="linkedin"/></a>
+                    <a href=""><img src={github} alt="github"/></a>
                 </div>
-                <p>
-                    Building a successful product is a challenge. I am highly energetic in user
-                    experience design, interfaces and web development.
-                </p>
-                <div>
-                    <Button variant='contained'>
-                        <Link
-                            to='./Aziz_Chebbi_CV.pdf'
-                            target='_blank'
-                            download
-                            style={{ color: "white", textDecoration: "none" }}
-                        >
-                            Download The resume
-                        </Link>
-                    </Button>
-                </div>
-            </motion.div>
-            <motion.div
-                className='about-svg'
-                variants={imgVariants}
-                animate='visible'
-                initial='hidden'
-            >
-                <img src={Svg} />
-            </motion.div>
-        </div>
+                <div className="vertical-ligne"></div>
+            </div>
+            <div className="email">
+                <img src={email} alt="email"/>
+            </div>
+            <div className='banner'>
+                <div className="about">
+                    <h1>Aziz Chebbi</h1>
+                    <div>
+                        <div className="description">
+                            <p>Software engineering student, who loves competitive programming and javascript development - based in Tunisia</p>
+                            <Button variant="contained" color="error">Download CV</Button>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </>
     );
 }
 

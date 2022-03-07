@@ -1,37 +1,43 @@
-import React from "react";
-import Header from "./components/Header/Header";
+import React, { useEffect, useState } from "react";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import TimeLine from "./components/Timeline/TimeLine";
 import Activities from "./components/Activities/Activities";
-import Contact from "./components/Contact/Contact";
-
+import Loading from "./components/Loading/Loading";
 import "./css/app.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
     return (
-        <div className='app'>
-            <Router>
-                <Routes>
-                    <Route
-                        path='/'
-                        element={
-                            <>
-                                <Header />
-                                <About />
-                                <Skills />
-                                <TimeLine />
-                                <Projects />
-                                <Activities />
-                                <Contact />
-                            </>
-                        }
-                    />
-                </Routes>
-            </Router>
-        </div>
+        <>
+            {loading && <Loading />}
+            <div className="app">
+                <Router>
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={
+                                <>
+                                    <About />
+                                    <Skills />
+                                    <TimeLine />
+                                    <Projects />
+                                    <Activities />
+                                </>
+                            }
+                        />
+                    </Routes>
+                </Router>
+            </div>
+        </>
     );
 }
 

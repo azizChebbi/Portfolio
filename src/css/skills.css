@@ -7,22 +7,43 @@
     padding-top: 100px;
     color: black;
 }
-.skills div {
+.skills h1 {
+    position: relative;
+}
+.skills h1::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 60px;
+    background-color: var(--secondary-color);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.skills .languages {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     max-width: 60vw;
     margin: auto;
     flex-wrap: wrap;
-    gap: 40px;
+}
+.skills .languages > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 120px;
+    flex-direction: row;
+}
+.skills .languages div div {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 15px;
 }
 .skills img {
-    width: 150px;
+    width: 70px;
     transition: 0.4s;
-}
-
-.skills img:hover {
-    transform: scale(1.5);
 }
 
 @media screen and (max-width: 900px) {

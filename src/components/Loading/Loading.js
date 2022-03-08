@@ -1,6 +1,5 @@
 import React from "react";
 import Loader from "../../images/loader.svg";
-import LoaderDots from "../../images/loaderDots.svg";
 
 function Loading() {
     return (

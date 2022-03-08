@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
-import TimeLine from "./components/Timeline/TimeLine";
-import Activities from "./components/Activities/Activities";
 import Loading from "./components/Loading/Loading";
 import "./css/app.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Contact/Footer";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -28,9 +27,8 @@ function App() {
                                 <>
                                     <About />
                                     <Skills />
-                                    <TimeLine />
                                     <Projects />
-                                    <Activities />
+                                    <Footer />
                                 </>
                             }
                         />

@@ -2,30 +2,40 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-function LanguageImage({ delay, children }) {
+function Language({ delay, text, src }) {
     const controls = useAnimation();
     const { ref, inView } = useInView();
     useEffect(() => {
         if (inView) {
             controls.start("visible");
+        } else {
+            controls.start("hidden");
         }
     }, [controls, inView]);
     const variants = {
         visible: {
-            scale: 1,
+            y: 0,
+            opacity: 1,
             transition: {
                 delay,
+                duration: 0.4,
             },
         },
         hidden: {
-            scale: 0,
+            y: 50,
+            opacity: 0,
         },
     };
     return (
-        <motion.div ref={ref} variants={variants} initial='hidden' animate={controls}>
-            {children}
+        <motion.div
+            ref={ref}
+            variants={variants}
+            initial="hidden"
+            animate={controls}
+        >
+            <img src={src} alt="language icon" />
         </motion.div>
     );
 }
 
-export default LanguageImage;
+export default Language;

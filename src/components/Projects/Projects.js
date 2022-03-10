@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import "../../css/projects.css";
 import Card from "./Card";
-import Netflix from "../../images/netflix.jpg";
-import Messenger from "../../images/messenger.jpg";
+import Netflix from "../../images/netflix.jpeg";
+import Messenger from "../../images/messenger.webp";
 import Portfolio from "../../images/portfolio.jpg";
-import Ecommerce from "../../images/ecommerce.jpg";
+import Ecommerce from "../../images/ecommerce.jpeg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -58,11 +58,20 @@ function Projects() {
     };
     return (
         <>
-            <div className='projects' id='projects'>
-                <motion.h1 variants={header} initial='hidden' animate={controls}>
-                    Projects I have made
+            <div className="projects" id="projects">
+                <motion.h1
+                    variants={header}
+                    initial="hidden"
+                    animate={controls}
+                >
+                    Projects
                 </motion.h1>
-                <motion.div ref={ref} variants={variants} initial='hidden' animate={controls}>
+                <motion.div
+                    ref={ref}
+                    variants={variants}
+                    initial="hidden"
+                    animate={controls}
+                >
                     <Card
                         title={"E-commerce"}
                         src={Ecommerce}
@@ -79,7 +88,9 @@ function Projects() {
                         title={"Messenger"}
                         src={Messenger}
                         demo_href={"https://messanger-5c4be.web.app/"}
-                        github_href={"https://github.com/azizChebbi/Messenger_app"}
+                        github_href={
+                            "https://github.com/azizChebbi/Messenger_app"
+                        }
                     />
                     <Card
                         title={"Portfolio"}

@@ -43,7 +43,7 @@
     background-color: var(--secondary-color);
     bottom: -20px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(50%);
 }
 .about > div {
     flex: 1;
@@ -63,13 +63,18 @@
     cursor: pointer;
 }
 .description button {
-    margin-top: 40px;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 10px;
+    z-index: 1;
+    margin-top: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 80px;
+    border-radius: 30px;
     font-family: sans-serif;
     cursor: pointer;
-    background-color: var(--secondary-color);
+    background-color: #e34972;
+}
+.description button:hover {
+    background-color: #e34972;
 }
 .svg {
     position: absolute;

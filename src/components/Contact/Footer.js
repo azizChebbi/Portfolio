@@ -4,18 +4,25 @@ import "../../css/contact.css";
 import facebook from "../../images/facebook.png";
 import linkedin from "../../images/linkedin.png";
 import github from "../../images/github.png";
+import conversation from "../../images/conversation.svg";
 
 function Footer() {
     return (
         <div className="footer">
             <div className="seperator"></div>
             <div className="form">
-                <p>Want to hire me</p>
+                <p>Want to hire me?</p>
                 <Button variant="contained">Let's talk</Button>
                 <div className="icons">
-                    <img src={facebook} alt="facebook" />
-                    <img src={linkedin} alt="linkedin" />
-                    <img src={github} alt="github" />
+                    <div>
+                        <img src={facebook} alt="facebook" />
+                    </div>
+                    <div>
+                        <img src={linkedin} alt="linkedin" />
+                    </div>
+                    <div>
+                        <img src={github} alt="github" />
+                    </div>
                 </div>
             </div>
         </div>

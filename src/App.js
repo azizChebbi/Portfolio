@@ -10,7 +10,7 @@ import Fixed from "./components/Fixed/Fixed";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import TimeLine from "./components/Timeline/TimeLine";
-import Project from "./components/ProjectDetails/Project";
+
 import Header from "./components/Header/Header";
 
 function App() {
@@ -41,7 +41,6 @@ function App() {
                                 </>
                             }
                         />
-                        <Route path="/:id" element={<Project />} />
                     </Routes>
                 </AnimatePresence>
             </div>

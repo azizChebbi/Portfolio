@@ -61,19 +61,20 @@
     background-color: white;
     border-radius: 50%;
 }
+.icons a {
+    background-color: #212428;
+    padding: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.5s;
+}
+.icons a:hover {
+    margin-bottom: -15px;
+    background-color: #121415;
+}
 .icons img {
     width: 30px;
     height: 30px;
-}
-.footer .seperator {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    left: 0;
-    /* background-image: url(../images/seperator1.svg); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 440px) {

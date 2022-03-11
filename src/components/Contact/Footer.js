@@ -13,15 +13,16 @@ function Footer() {
                 <p>Want to hire me?</p>
                 <Button variant="contained">Let's talk</Button>
                 <div className="icons">
-                    <div>
+                    <a href="">
                         <img src={facebook} alt="facebook" />
-                    </div>
-                    <div>
+                    </a>
+                    <a>
+                        {" "}
                         <img src={linkedin} alt="linkedin" />
-                    </div>
-                    <div>
+                    </a>
+                    <a href="">
                         <img src={github} alt="github" />
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

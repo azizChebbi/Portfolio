@@ -4,7 +4,6 @@ import "../../css/contact.css";
 import facebook from "../../images/facebook.png";
 import linkedin from "../../images/linkedin.png";
 import github from "../../images/github.png";
-import conversation from "../../images/conversation.svg";
 
 function Footer() {
     return (

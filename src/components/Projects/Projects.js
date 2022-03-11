@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import "../../css/projects.css";
 import Card from "./Card";
 import Netflix from "../../images/netflix.jpeg";
-import Messenger from "../../images/messenger.webp";
+import Messenger from "../../images/messenger.jpeg";
 import Portfolio from "../../images/portfolio.jpg";
-import Ecommerce from "../../images/ecommerce.jpeg";
+import Ecommerce from "../../images/ecommerce.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -64,7 +64,7 @@ function Projects() {
                     initial="hidden"
                     animate={controls}
                 >
-                    Projects
+                    My Portfolio
                 </motion.h1>
                 <motion.div
                     ref={ref}
@@ -73,19 +73,23 @@ function Projects() {
                     animate={controls}
                 >
                     <Card
-                        title={"E-commerce"}
+                        title={"E-commerce website, built using Next.js"}
                         src={Ecommerce}
                         demo_href={"https://e-commerce-azizchebbi.vercel.app/"}
                         github_href={"https://github.com/azizChebbi/e-commerce"}
                     />
                     <Card
-                        title={"Netflix"}
+                        title={
+                            "SPA application using React with Responsive design"
+                        }
                         src={Netflix}
                         demo_href={"https://movies-series-bb260.web.app"}
                         github_href={"https://github.com/azizChebbi/Netflix"}
                     />
                     <Card
-                        title={"Messenger"}
+                        title={
+                            "Real time chat application on top of Node/Socket.io"
+                        }
                         src={Messenger}
                         demo_href={"https://messanger-5c4be.web.app/"}
                         github_href={
@@ -93,7 +97,7 @@ function Projects() {
                         }
                     />
                     <Card
-                        title={"Portfolio"}
+                        title={"This portfolio website  with the source code"}
                         src={Portfolio}
                         demo_href={window.location.href}
                         github_href={"https://github.com/azizChebbi/Portfolio"}

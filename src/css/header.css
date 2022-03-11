@@ -2,34 +2,45 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 100px;
+    padding: 20px 100px;
     overflow-x: hidden;
-    z-index: 10000;
-    border-bottom: 1px #a8a7a7 solid;
+    z-index: 10000000;
     margin: 0;
     color: #cececf;
     font-family: "Maven Pro", sans-serif;
     position: fixed;
     width: 100vw;
-    background-color: white;
     top: 0;
+    transition: 0.4s;
 }
-nav .logo {
+
+nav.active {
+    background-color: rgb(33, 36, 40);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+}
+
+nav .bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .bar > div:first-child {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    column-gap: 15px;
+}
+
+nav .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
     gap: 10px;
-    color: white;
-    transition: 0.7s;
-    cursor: pointer;
 }
-nav .logo:hover {
-    color: #ffc200;
-}
-nav .logo p {
-    font-size: 30px;
-    font-weight: 700;
-    padding: 10px 0;
+nav .links .active {
+    color: var(--secondary-color);
 }
 
 nav .link {
@@ -42,37 +53,16 @@ nav .link {
     cursor: pointer;
 }
 nav .link:hover {
-    color: #ffc200;
+    color: var(--secondary-color);
 }
 
-nav button {
-    background-color: #6163ff;
-    color: white;
-    padding: 7px 27px;
-    font-weight: 500;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    outline: 0;
-    margin-left: 70px;
-    cursor: pointer;
-}
 nav .burger {
     width: 30px;
     height: 30px;
     display: none;
     margin: auto;
 }
-nav .links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    gap: 10px;
-}
-nav .links .active {
-    color: #ffc200;
-}
+
 nav .links1 {
     width: 100%;
     top: 0;

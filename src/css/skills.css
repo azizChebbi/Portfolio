@@ -9,6 +9,8 @@
 }
 .skills h1 {
     position: relative;
+    color: var(--headers-color);
+    font-size: 45px;
 }
 .skills h1::before {
     position: absolute;

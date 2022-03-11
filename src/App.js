@@ -4,14 +4,18 @@ import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import Loading from "./components/Loading/Loading";
 import "./css/app.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Contact/Footer";
 import Fixed from "./components/Fixed/Fixed";
-import { Scrollbar } from "smooth-scrollbar-react";
+import { AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
+import TimeLine from "./components/Timeline/TimeLine";
+import Project from "./components/ProjectDetails/Project";
+import Header from "./components/Header/Header";
 
 function App() {
     const [loading, setLoading] = useState(true);
-
+    const location = useLocation();
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
@@ -21,31 +25,25 @@ function App() {
         <>
             {loading && <Loading />}
             <div className="app">
-                <Scrollbar
-                    damping={0}
-                    plugins={{
-                        overscroll: {
-                            effect: "glow",
-                        },
-                    }}
-                >
-                    <Router>
-                        <Routes>
-                            <Route
-                                path="/"
-                                element={
-                                    <>
-                                        <About />
-                                        <Skills />
-                                        <Projects />
-                                        <Footer />
-                                        <Fixed />
-                                    </>
-                                }
-                            />
-                        </Routes>
-                    </Router>
-                </Scrollbar>
+                <AnimatePresence>
+                    <Routes location={location} key={location.key}>
+                        <Route
+                            path="/"
+                            element={
+                                <>
+                                    <Header />
+                                    <About />
+                                    <Skills />
+                                    <TimeLine />
+                                    <Projects />
+                                    <Footer />
+                                    <Fixed />
+                                </>
+                            }
+                        />
+                        <Route path="/:id" element={<Project />} />
+                    </Routes>
+                </AnimatePresence>
             </div>
         </>
     );

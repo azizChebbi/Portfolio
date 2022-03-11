@@ -41,8 +41,8 @@ function Skills() {
                 </div>
                 <div>
                     <Language
-                        text="Java"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"
+                        text="Express"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                         delay={0.4}
                     ></Language>
 
@@ -63,8 +63,8 @@ function Skills() {
                 </div>
                 <div>
                     <Language
-                        text="Express"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                        text="Java"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"
                         delay={0.4}
                     ></Language>
                 </div>

@@ -1,11 +1,38 @@
 .timeline {
     margin-top: 50px;
 }
+.timeline .vertical-timeline-element--work h3 {
+    font-size: 20px;
+}
+.timeline .vertical-timeline-element--work h4 {
+    font-size: 17px;
+}
+.timeline .vertical-timeline-element--work h3,
+.timeline .vertical-timeline-element--work h4 {
+    color: white;
+}
+.timeline .vertical-timeline-element--work p {
+    color: var(--headers-color);
+    font-size: 15px;
+}
+
 .timeline .vertical-timeline-element-date {
-    color: black;
+    color: var(--headers-color);
 }
 .timeline > h1 {
-    color: black;
+    color: var(--headers-color);
+    font-size: 45px;
     text-align: center;
     margin-bottom: 70px;
+    position: relative;
+}
+.timeline > h1::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 40px;
+    background-color: var(--secondary-color);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
 }

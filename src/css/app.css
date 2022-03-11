@@ -1,5 +1,6 @@
 :root {
     --secondary-color: #e34972;
+    --headers-color: #c4cfde;
     --background: #f7f8fc;
     --shadow: rgba(17, 12, 46, 0.15) 50px 48px 100px 50px;
 }
@@ -12,7 +13,8 @@
 }
 html,
 body {
-    background: var(--background);
+    /* background: var(--background); */
+    background-color: #212428;
     font-family: "Maven Pro", sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;

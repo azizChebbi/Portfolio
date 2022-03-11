@@ -5,30 +5,35 @@ import svg from "../../images/character23.svg";
 
 function About() {
     return (
-        <>
-            <div className="banner">
-                <div className="about">
-                    <h1>Aziz Chebbi</h1>
-                    <div className="description">
-                        <p>
-                            Software engineering student, who loves competitive
-                            programming and javascript development - based in
-                            Tunisia
-                        </p>
-                        <Button
-                            variant="contained"
-                            onClick={() => console.log("clicked")}
-                        >
-                            Download CV
-                        </Button>
-                    </div>
+        <div className="banner">
+            <div className="about">
+                <div>
+                    <p>
+                        Hi, I'm{" "}
+                        <span>
+                            Aziz Chebbi
+                            <br />
+                        </span>
+                        Software Engineering Student.
+                    </p>
+                    <p>
+                        I'm a full-stack JavaScript developer with strong focus
+                        on <b>React</b> alongside with <b>Next</b>.I love
+                        creating scalable web applications with high performance
+                        and user experience.
+                    </p>
+                    <Button
+                        variant="contained"
+                        onClick={() => console.log("clicked")}
+                    >
+                        Download CV
+                    </Button>
                 </div>
                 <div className="svg">
                     <img src={svg} />
                 </div>
-                <div className="seperator"></div>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -6,6 +6,7 @@ import LiveTvRoundedIcon from "@mui/icons-material/LiveTvRounded";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 
 const theme = createTheme({
     palette: {
@@ -41,17 +42,23 @@ function Card({ title, src, demo_href, github_href }) {
 
     return (
         <motion.div className="card" variants={variants}>
-            <img src={src} />
-            <div>
-                <h1>{title}</h1>
+            <div className="image">
+                <img src={src} />
+            </div>
+            <p>{title}</p>
+            <div className="buttons">
+                <a href="#">
+                    <Button variant="contained">
+                        <RemoveRedEyeOutlinedIcon /> {"  "}
+                        <span>Live preview</span>
+                    </Button>
+                </a>
 
-                <ThemeProvider theme={theme}>
-                    <div className="buttons">
-                        <Button variant="contained" color="primary">
-                            See more
-                        </Button>
-                    </div>
-                </ThemeProvider>
+                <Button variant="contained">
+                    <GitHubIcon />
+                    <span>Github</span>
+                    {"  "}
+                </Button>
             </div>
         </motion.div>
     );

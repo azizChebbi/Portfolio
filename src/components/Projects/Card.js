@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import "../../css/card.css";
 import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LiveTvRoundedIcon from "@mui/icons-material/LiveTvRounded";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
@@ -16,7 +15,7 @@ const theme = createTheme({
     },
 });
 
-function Card({ title, src, demo_href, github_href }) {
+function Card({ title, src, github_href, demo_href }) {
     const controls = useAnimation();
     const { ref, inView } = useInView();
     useEffect(() => {
@@ -47,18 +46,19 @@ function Card({ title, src, demo_href, github_href }) {
             </div>
             <p>{title}</p>
             <div className="buttons">
-                <a href="#">
+                <a href={demo_href}>
                     <Button variant="contained">
                         <RemoveRedEyeOutlinedIcon /> {"  "}
                         <span>Live preview</span>
                     </Button>
                 </a>
-
-                <Button variant="contained">
-                    <GitHubIcon />
-                    <span>Github</span>
-                    {"  "}
-                </Button>
+                <a href={github_href}>
+                    <Button variant="contained">
+                        <GitHubIcon />
+                        <span>Github</span>
+                        {"  "}
+                    </Button>
+                </a>
             </div>
         </motion.div>
     );

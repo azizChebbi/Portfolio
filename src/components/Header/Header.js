@@ -1,9 +1,7 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-scroll";
 import "../../css/header.css";
-// import Burger from "../../images/burger.svg";
-// import Close from "../../images/close.png";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import Burger from "../../images/burger.png";
+import Close from "../../images/close.png";
 import { motion, useAnimation } from "framer-motion/dist/es/index";
 import ActiveLink from "./ActiveLink";
 import Avatar from "@mui/material/Avatar";
@@ -23,7 +21,7 @@ export default function Header() {
         controls.start(hide ? show_style : hide_style);
         setHide(!hide);
     };
-    const arr = ["About", "Skills", "Experience", "Projects", "Activities"];
+    const arr = ["About", "Skills", "Experience", "Projects", "Contact"];
     window.addEventListener("scroll", () => {
         console.log(window.scrollY);
         // nav.current.classList.add("active");
@@ -56,20 +54,18 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* <div className='burger'>
+            <div className="burger">
                 <img src={Burger} onClick={handleClick} />
-            </div> */}
+            </div>
 
             <motion.div
                 className="links1"
                 initial={{ x: "100vw" }}
                 animate={controls}
             >
-                {/* 
                 <div className="close">
                     <img src={Close} onClick={handleClick} />
                 </div>
-                */}
                 {arr.map((item) => (
                     <ActiveLink
                         id={item.toLowerCase()}

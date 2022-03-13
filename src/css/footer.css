@@ -31,10 +31,17 @@
     justify-content: center;
 }
 .footer .form p {
+    color: var(--headers-color);
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer .form p:first-child {
     color: white;
     font-size: 50px;
     font-weight: bold;
 }
+
 .footer .form button {
     margin-top: 30px;
     font-size: 12px;
@@ -77,23 +84,43 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 440px) {
-    .contact div div {
-        margin: 20px;
-        text-align: center;
-        line-height: 1.5;
+.footer .up {
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+    padding: 70px;
+    border-radius: 50%;
+    background-color: #121415;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.footer .up img {
+    width: 30px;
+    height: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media screen and (max-width: 570px) {
+    .footer {
+        height: 40vh;
     }
-    .contact div a img {
-        width: 24px;
-        height: 24px;
+    .footer .form {
+        margin-top: 10px;
     }
-    .contact div:nth-child(2) a {
-        padding: 10px 5px;
+    .footer .form p {
+        font-size: 15px;
     }
-    .contact .top {
-        position: absolute;
-        bottom: 10px;
-        right: 20px;
-        padding: 5px;
+    .footer .form p:first-child {
+        font-size: 35px;
+    }
+    .footer .form button {
+        margin-top: 30px;
+        padding: 15px 50px;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
     }
 }

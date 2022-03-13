@@ -1,5 +1,5 @@
 .skills {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-width: 60vw;
     margin: auto;
     flex-wrap: wrap;
 }
@@ -49,26 +48,22 @@
 }
 
 @media screen and (max-width: 900px) {
-    .skills {
-        padding-top: 50px;
+    .skills h1 {
+        font-size: 35px;
     }
-    .skills > div {
-        margin: 100px 0;
-        max-width: 80vw;
+    .skills img {
+        width: 50px;
     }
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 570px) {
     .skills {
-        padding-top: 20px;
-    }
-    .skills > div {
-        margin-top: 50px;
+        height: 80vh;
     }
     .skills img {
-        width: 100px;
+        width: 30px;
     }
-    .skills h1 {
-        margin: 0;
+    .skills .languages > div {
+        gap: 70px;
     }
 }

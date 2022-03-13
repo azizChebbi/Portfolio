@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-function Language({ delay, text, src }) {
+function Language({ delay, src }) {
     const controls = useAnimation();
     const { ref, inView } = useInView();
     useEffect(() => {

@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
 import "../../css/projects.css";
 import Card from "./Card";
-import Netflix from "../../images/netflix.jpeg";
-import Messenger from "../../images/messenger.jpeg";
-import Portfolio from "../../images/portfolio.jpg";
-import Ecommerce from "../../images/ecommerce.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import cards1 from "../../data/cards";
 
 function Projects() {
     const controls = useAnimation();
@@ -72,36 +69,16 @@ function Projects() {
                     initial="hidden"
                     animate={controls}
                 >
-                    <Card
-                        title={"E-commerce website, built using Next.js"}
-                        src={Ecommerce}
-                        demo_href={"https://e-commerce-azizchebbi.vercel.app/"}
-                        github_href={"https://github.com/azizChebbi/e-commerce"}
-                    />
-                    <Card
-                        title={
-                            "SPA application using React with Responsive design"
-                        }
-                        src={Netflix}
-                        demo_href={"https://movies-series-bb260.web.app"}
-                        github_href={"https://github.com/azizChebbi/Netflix"}
-                    />
-                    <Card
-                        title={
-                            "Real time chat application on top of Node/Socket.io"
-                        }
-                        src={Messenger}
-                        demo_href={"https://messanger-5c4be.web.app/"}
-                        github_href={
-                            "https://github.com/azizChebbi/Messenger_app"
-                        }
-                    />
-                    <Card
-                        title={"This portfolio website  with the source code"}
-                        src={Portfolio}
-                        demo_href={window.location.href}
-                        github_href={"https://github.com/azizChebbi/Portfolio"}
-                    />
+                    {cards1.map((card) => {
+                        return (
+                            <Card
+                                title={card.title}
+                                src={card.src}
+                                demo_href={card.demo_href}
+                                github_href={card.github_href}
+                            />
+                        );
+                    })}
                 </motion.div>
             </div>
         </>

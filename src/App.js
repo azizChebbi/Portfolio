@@ -5,9 +5,7 @@ import Skills from "./components/Skills/Skills";
 import Loading from "./components/Loading/Loading";
 import "./css/app.css";
 import { Routes, Route } from "react-router-dom";
-import Footer from "./components/Contact/Footer";
-import Fixed from "./components/Fixed/Fixed";
-import { AnimatePresence } from "framer-motion";
+import Footer from "./components/Footer/Footer";
 import { useLocation } from "react-router-dom";
 import TimeLine from "./components/Timeline/TimeLine";
 
@@ -25,24 +23,21 @@ function App() {
         <>
             {loading && <Loading />}
             <div className="app">
-                <AnimatePresence>
-                    <Routes location={location} key={location.key}>
-                        <Route
-                            path="/"
-                            element={
-                                <>
-                                    <Header />
-                                    <About />
-                                    <Skills />
-                                    <TimeLine />
-                                    <Projects />
-                                    <Footer />
-                                    <Fixed />
-                                </>
-                            }
-                        />
-                    </Routes>
-                </AnimatePresence>
+                <Routes location={location} key={location.key}>
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                <Header />
+                                <About />
+                                <Skills />
+                                <TimeLine />
+                                <Projects />
+                                <Footer />
+                            </>
+                        }
+                    />
+                </Routes>
             </div>
         </>
     );

@@ -57,10 +57,13 @@ nav .link:hover {
 }
 
 nav .burger {
+    margin: auto;
+    display: none;
+}
+
+nav .burger img {
     width: 30px;
     height: 30px;
-    display: none;
-    margin: auto;
 }
 
 nav .links1 {
@@ -69,7 +72,7 @@ nav .links1 {
     left: 0;
     position: fixed;
     height: 100vh;
-    background-color: white;
+    background-color: var(--background);
     display: flex;
     gap: 30px;
     flex-direction: column;
@@ -82,14 +85,17 @@ nav .links1 .close {
     left: 20px;
 }
 nav .links1 .close img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 @media screen and (max-width: 700px) {
     nav {
-        padding: 10px 0;
-        justify-content: space-between;
+        padding: 10px 20px;
+        justify-content: space-around;
+    }
+    nav .bar > div:first-child h1 {
+        display: none;
     }
     nav .links {
         display: none;

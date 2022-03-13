@@ -78,16 +78,39 @@
     width: 300px;
 }
 
-/* 
-.seperator {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 500px;
-    background: url(../images/seperator.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
+@media screen and (max-width: 1000px) {
+    .banner {
+        height: 80vh;
+    }
+    .svg {
+        display: none;
+    }
+    .about > div:nth-child(1) {
+        width: 100%;
+    }
 }
-*/
+@media screen and (max-width: 570px) {
+    .about p:first-child {
+        font-size: 40px;
+    }
+    .about p {
+        font-size: 17px;
+    }
+    .about button {
+        padding: 15px 50px;
+        border-radius: 30px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .about p:first-child {
+        font-size: 35px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+    .about button {
+        padding: 15px 50px;
+        border-radius: 30px;
+    }
+}

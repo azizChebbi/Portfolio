@@ -5,9 +5,7 @@ import Node from "../../images/node.svg";
 import Cpp from "../../images/cpp.svg";
 import MySql from "../../images/mysql.svg";
 import Mongodb from "../../images/mongodb.svg";
-import Express from "../../images/express.svg";
 import Typescript from "../../images/typescript.svg";
-import Next from "../../images/Next.svg";
 import "../../css/skills.css";
 
 const languages = [

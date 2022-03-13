@@ -1,6 +1,7 @@
 .card {
     border-radius: 10px;
     width: 400px;
+    height: auto;
     transition: 2s;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 20px 30px;
@@ -57,4 +58,10 @@
 }
 .card button span {
     padding-left: 5px;
+}
+@media screen and (max-width: 450px) {
+    .card {
+        max-width: 350px;
+        padding: 10px 20px;
+    }
 }

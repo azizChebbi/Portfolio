@@ -22,7 +22,7 @@ function About() {
                         creating scalable web applications with high performance
                         and user experience.
                     </p>
-                    <a href="/cv.pdf" target="_blank">
+                    <a href="/CV.pdf" target="_blank">
                         <Button variant="contained">Download CV</Button>
                     </a>
                 </div>

@@ -1,74 +1,76 @@
 import React from "react";
-import Language from "./Language";
-import Rct from "../../images/react.svg";
-import Node from "../../images/node.svg";
-import Cpp from "../../images/cpp.svg";
-import MySql from "../../images/mysql.svg";
-import Mongodb from "../../images/mongodb.svg";
-import Typescript from "../../images/typescript.svg";
-import "../../css/skills.css";
+import Rct from "../../images/skills/skills/reactjs.svg";
+import Node from "../../images/skills/skills/nodejs.svg";
+import Express from "../../images/skills/skills/expressjs.svg";
+import Javascript from "../../images/skills/skills/javascript.svg";
+import Next from "../../images/skills/skills/nextjs.svg";
+import Nest from "../../images/skills/skills/nestjs.svg";
+import MySql from "../../images/skills/skills/mysql.svg";
+import Mongodb from "../../images/skills/skills/mongodb.svg";
+import Typescript from "../../images/skills/skills/typescript.svg";
 
-const languages = [
-    {
-        text: "React",
-        src: Rct,
-        delay: 0.4,
-    },
-    {
-        text: "React",
-        src: Rct,
-        delay: 0.4,
-    },
+import "../../css/skills.css";
+import Skill from "./Skill";
+
+const firstRowSkills = [
+  {
+    src: Rct,
+  },
+  {
+    src: Node,
+  },
+  {
+    src: Javascript,
+  },
+];
+const secondRowSkills = [
+  {
+    src: Express,
+  },
+  {
+    src: Next,
+  },
+  {
+    src: Nest,
+  },
+];
+const thirdRowSkills = [
+  {
+    src: Mongodb,
+  },
+  {
+    src: Typescript,
+  },
+  {
+    src: MySql,
+  },
 ];
 
 function Skills() {
-    return (
-        <div className="skills" id="skills">
-            <h1>Technical skills</h1>
-            <div className="languages">
-                <div>
-                    <Language text="React" src={Rct} delay={0.4}></Language>
-                </div>
-                <div>
-                    <Language text="Node" src={Node} delay={0.4}></Language>
-                    <Language
-                        text="Next"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
-                        delay={0.4}
-                    ></Language>
-                </div>
-                <div>
-                    <Language
-                        text="Express"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                        delay={0.4}
-                    ></Language>
-
-                    <Language
-                        text="MongoDB"
-                        src={Mongodb}
-                        delay={0.4}
-                    ></Language>
-                    <Language
-                        text="TypeScript"
-                        src={Typescript}
-                        delay={0.4}
-                    ></Language>
-                </div>
-                <div>
-                    <Language text="Cpp" src={Cpp} delay={0.4}></Language>
-                    <Language text="MySql" src={MySql} delay={0.4}></Language>
-                </div>
-                <div>
-                    <Language
-                        text="Java"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"
-                        delay={0.4}
-                    ></Language>
-                </div>
-            </div>
+  return (
+    <div className="skills" id="skills">
+      <div>
+        <h1>Technical skills</h1>
+        <div className="images">
+          <div className="first-row">
+            {firstRowSkills.map((skill) => (
+              <Skill key={skill} src={skill.src} />
+            ))}
+          </div>
+          <div className="second-row">
+            {secondRowSkills.map((skill) => (
+              <Skill key={skill} src={skill.src} />
+            ))}
+          </div>
+          <div className="third-row">
+            {thirdRowSkills.map((skill) => (
+              <Skill key={skill} src={skill.src} />
+            ))}
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default Skills;

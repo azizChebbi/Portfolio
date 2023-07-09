@@ -1,69 +1,94 @@
 .skills {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 100px;
-    color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 150px;
+  color: black;
 }
+
+.skills > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.first-row,
+.second-row,
+.third-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.second-row {
+  transform: translateX(-35%);
+}
+
+.third-row {
+  transform: translateX(-70%);
+}
+
 .skills h1 {
-    position: relative;
-    color: var(--headers-color);
-    font-size: 45px;
+  position: relative;
+  color: var(--headers-color);
+  font-size: 45px;
 }
 .skills h1::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 60px;
-    background-color: var(--secondary-color);
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 60px;
+  background-color: var(--secondary-color);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.skills .languages {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    flex-wrap: wrap;
+
+.skills .skill {
+  padding: 30px;
+  border: white solid 1px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.skills .languages > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 120px;
-    flex-direction: row;
-}
-.skills .languages div div {
-    background-color: white;
-    border-radius: 15px;
-    padding: 10px 15px;
-}
+
 .skills img {
-    width: 70px;
-    transition: 0.4s;
+  width: 90px;
+  transition: 0.4s;
 }
 
 @media screen and (max-width: 900px) {
-    .skills h1 {
-        font-size: 35px;
-    }
-    .skills img {
-        width: 50px;
-    }
+  .skills > div {
+    display: block;
+  }
+  .skills h1 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .skills img {
+    width: 50px;
+  }
+  .second-row,
+  .third-row {
+    transform: translateX(0);
+  }
 }
 
 @media screen and (max-width: 570px) {
-    .skills {
-        height: 80vh;
-    }
-    .skills img {
-        width: 30px;
-    }
-    .skills .languages > div {
-        gap: 70px;
-    }
+  .skills {
+    height: 80vh;
+  }
+  .skills img {
+    width: 30px;
+  }
+  .skills .languages > div {
+    gap: 70px;
+  }
 }

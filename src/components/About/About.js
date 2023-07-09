@@ -3,35 +3,46 @@ import Button from "@mui/material/Button";
 import "../../css/about.css";
 import svg from "../../images/character23.svg";
 function About() {
-    return (
-        <div className="banner">
-            <div className="about">
-                <div>
-                    <p>
-                        Hi, I'm{" "}
-                        <span>
-                            Aziz Chebbi
-                            <br />
-                        </span>
-                        Software Engineering Student.
-                    </p>
-
-                    <p>
-                        I'm a full-stack JavaScript developer with strong focus
-                        on <b>React</b> alongside with <b>Next</b>.I love
-                        creating scalable web applications with high performance
-                        and user experience.
-                    </p>
-                    <a href="/CV.pdf" target="_blank">
-                        <Button variant="contained">Download CV</Button>
-                    </a>
-                </div>
-                <div className="svg">
-                    <img src={svg} />
-                </div>
-            </div>
+  return (
+    <div className="banner">
+      <div className="about">
+        <div>
+          <div>
+            <p>
+              Hi, I'm{" "}
+              <span>
+                Aziz Chebbi,
+                <br />
+              </span>
+              a Software Engineer.
+            </p>
+          </div>
+          <div>
+            <p>
+              I'm a <span style={{ color: "white" }}>Software engineer</span>, competitive programmer <br /> and a MERN
+              developer. I love creating high performance <br /> applications using the power of JavaScript and I'm
+              always <br /> looking for great opportunities and new challenges.
+            </p>
+          </div>
+          <a href="/CV.pdf" target="_blank">
+            <Button variant="contained">Download CV</Button>
+          </a>
         </div>
-    );
+      </div>
+      <div className="big-circle">
+        <div className="small-circle">
+          <div>
+            <p>A full-stack experience</p>
+            <p>
+              That brings
+              <br /> together
+            </p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default About;

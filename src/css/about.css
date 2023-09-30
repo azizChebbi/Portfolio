@@ -134,8 +134,10 @@
     height: auto;
     padding-top: 120px;
   }
-  .about {
-    padding-left: 50px;
+  .banner .about {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
   }
   .about div p {
     font-size: 17px;

@@ -19,8 +19,8 @@ function About() {
           </div>
           <div>
             <p>
-              I'm a <span style={{ color: "white" }}>Software engineer</span>, competitive programmer{" "}
-              <br className="about-br" /> and a MERN developer. I love creating high performance{" "}
+              I'm a <span style={{ color: "white" }}>Software engineer</span>, open source contributor{" "}
+              <br className="about-br" /> and a competitve programmer. I love creating high performance{" "}
               <br className="about-br" /> applications using the power of JavaScript and I'm always{" "}
               <br className="about-br" /> looking for great opportunities and new challenges.
             </p>

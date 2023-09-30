@@ -84,6 +84,7 @@
 @media screen and (max-width: 570px) {
   .skills {
     height: 80vh;
+    padding-top: 60px;
   }
   .skills .skill {
     padding: 20px;

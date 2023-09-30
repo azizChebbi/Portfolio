@@ -85,8 +85,11 @@
   .skills {
     height: 80vh;
   }
+  .skills .skill {
+    padding: 20px;
+  }
   .skills img {
-    width: 30px;
+    width: 40px;
   }
   .skills .languages > div {
     gap: 70px;

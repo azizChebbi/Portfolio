@@ -19,12 +19,13 @@ function About() {
           </div>
           <div>
             <p>
-              I'm a <span style={{ color: "white" }}>Software engineer</span>, competitive programmer <br /> and a MERN
-              developer. I love creating high performance <br /> applications using the power of JavaScript and I'm
-              always <br /> looking for great opportunities and new challenges.
+              I'm a <span style={{ color: "white" }}>Software engineer</span>, competitive programmer{" "}
+              <br className="about-br" /> and a MERN developer. I love creating high performance{" "}
+              <br className="about-br" /> applications using the power of JavaScript and I'm always{" "}
+              <br className="about-br" /> looking for great opportunities and new challenges.
             </p>
           </div>
-          <a href="/CV.pdf" target="_blank">
+          <a href="/Cv.pdf" target="_blank">
             <Button variant="contained">Download CV</Button>
           </a>
         </div>
